@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit on Double Click</title>
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600|Playfair+Display:700" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style type="text/css">
+		h2{
+			font-family: 'Playfair Display', serif;
+		}
+		.list-group-item{
+			font-family: 'Josefin Sans', sans-serif;
+			font-weight: 400;
+			font-size: 18px;
+			padding-bottom: 13px;
+			cursor: default;
+		}
+		.list-group-item input{
+			padding-top: 0;
+			width: 100%;
+			border-top: 0;
+			border-left: 0;
+			border-right: 0;
+		}
+		.list-group-item input:focus{
+			outline: 0;
+		}
+		
+		.focused{
+			padding-bottom: 10px;
+			background: rgba(0,0,0, 0.03);
+		}
+		.focused input{
+			background: transparent;
+		}
+
+
+	</style>
+</head>
+<body>
+<div class="container"> 
+		<div class="row"> 
+				<div class="col-md-8 col-md-offset-2 col-sm-12">
+				<h2>Brainy Quotes</h2>
+					<ul class="list-group">
+						<li class="list-group-item">We must let go of the life we have planned, so as to accept the one that is waiting for us.</li>
+						<li class="list-group-item">The best preparation for tomorrow is doing your best today.</li>
+						<li class="list-group-item">I can't change the direction of the wind, but I can adjust my sails to always reach my destination.</li>
+						<li class="list-group-item">Love the moment and the energy of that moment will spread beyond all boundaries.</li>
+						<li class="list-group-item">You must do the things you think you cannot do.</li>
+						<li class="list-group-item">Put your heart, mind, and soul into even your smallest acts. This is the secret of success.</li>
+						<li class="list-group-item">Keep your face always toward the sunshine - and shadows will fall behind you.</li>
+						<li class="list-group-item">Nothing is impossible, the word itself says 'I'm possible'!</li>
+					</ul>
+
+				</div>
+		</div>
+</div>
+
+<script src="script.js"></script>
+<script type="text/javascript">
+
+	doubleClickEdit('ul.list-group li.list-group-item', 'focused', cb);					// Pass the elements selector to the function.
+
+	function cb(val){
+		console.log(val);
+	}
+
+</script>
+</body>
+</html>
