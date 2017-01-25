@@ -20,11 +20,11 @@
 			 	var liveInput = this.getElementsByTagName('input')[0];		//#15 Selects the recently appended input element in the DOM tree
 			 	liveInput.focus();											//#16 Focus the cursor in the input element 
 			 	liveInput.setSelectionRange(valueLength, valueLength);		//#17 Sets the cursor position at the end of the 
-			 	this.classList.add(focusClass);								//#18 Add a css class to the item to highlight it slightly different from other items as it is editable
+			 	if (focusClass) this.classList.add(focusClass);								//#18 Add a css class to the item to highlight it slightly different from other items as it is editable
 			 	
 			 	liveInput.addEventListener("blur", function(e){				//#19 Listens to the blur event on input element in DOM tree
 			 		listItem.innerHTML = this.value;						//#20 Gets the updated value from the input element & place it in the item by removing the form
-			 		listItem.classList.remove(focusClass);					//#21 Removes the css class as the item is no more editable
+			 		if (focusClass) listItem.classList.remove(focusClass);					//#21 Removes the css class as the item is no more editable
 			 		cb(this.value);								//logs the value to the console. Here other operations like ajax call to save the value in the database can be performed.
 			 	});
 
@@ -32,7 +32,7 @@
 			 	liveForm.addEventListener("submit", function(e){			//#23 Listens to the submit event on the form
 			 		e.preventDefault();										//#24 Prevents the default submission
 			 		listItem.innerHTML = liveInput.value;					//#25 Gets the updated value from the input element & place it in the item by removing the form, same as line#20
-			 		listItem.classList.remove(focusClass);					//#26 Removes the css class as the item is no more editable
+			 		if (focusClass) listItem.classList.remove(focusClass);					//#26 Removes the css class as the item is no more editable
 			 		cb(liveInput.value);							//logs the value to the console. Here other operations like ajax call to save the value in the database can be performed.
 
 			 	});

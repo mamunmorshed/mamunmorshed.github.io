@@ -102,6 +102,7 @@ var contextInitNode;
 
 doubleClickEdit('ul.list-group li.list-group-item', 'focused', cb);					// Pass the elements selector to the function.
 contextMenuInit();
+insertWatcher();
 
 function cb(val){
 	console.log(val);
@@ -190,11 +191,13 @@ function removeContextListeners(){
 		contextItems[i].removeEventListener('click', contextActions);
 	}
 }
-document.addEventListener('keyup', function(e){
-	if (e.keyCode==45) {
-		newItem();
-	}
-});
+function insertWatcher(){
+	document.addEventListener('keyup', function(e){
+		if (e.keyCode==45) {
+			newItem();
+		}
+	});
+}
 
 </script>
 </body>
