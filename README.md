@@ -7,4 +7,4 @@ My GitHub Page for Project Demos
 
 [Chart.js-study](https://mamunmorshed.github.io/chartjs/)
 
-[javascript30-drumkit](https://github.com/mamunmorshed/javascript30-drumkit)
+[javascript30-drumkit](https://mamunmorshed.github.io/javascript30-drumkit)
