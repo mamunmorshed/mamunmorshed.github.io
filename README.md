@@ -6,3 +6,5 @@ My GitHub Page for Project Demos
 [simple-tasks-app](https://mamunmorshed.github.io/simple-tasks-app/)
 
 [Chart.js-study](https://mamunmorshed.github.io/chartjs/)
+
+[javascript30-drumkit](https://github.com/mamunmorshed/javascript30-drumkit)
